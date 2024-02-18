@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    <!-- css link -->
+    <script src="script.js" defer></script> <!-- js link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- bootstrap icons link -->
+    <title>Analyzer 2.0</title>
+</head>
+<body>
+
+    <div class="analysis__container">
+        <h1>Analyzer 2.0</h1>
+        <section class="analyzer__input">   <!-- analyzer calculator container -->
+            <div class="analyzer">  <!-- analyzer calculator  -->
+                <header id="analyzer__display"> <!-- analyzer calculator display -->
+                    <span id="message__display">Digite um número...</span>
+                    <div id="number__display">0</div>
+                </header>   <!-- end of analyzer calculator display -->
+
+                <div id="primary__actions"> <!-- analyzer numbers and actions for the display -->
+                    <button class="primaryAction__input number__action" value="1"> 1 </button>
+                    <button class="primaryAction__input number__action" value="2"> 2 </button>
+                    <button class="primaryAction__input number__action" value="3"> 3 </button>
+                    <button class="primaryAction__input number__action" value="4"> 4 </button>
+                    <button class="primaryAction__input number__action" value="5"> 5 </button>
+                    <button class="primaryAction__input number__action" value="6"> 6 </button>
+                    <button class="primaryAction__input number__action" value="7"> 7 </button>
+                    <button class="primaryAction__input number__action" value="8"> 8 </button>
+                    <button class="primaryAction__input number__action" value="9"> 9 </button>
+                    <button class="primaryAction__input number__action" value="0"> 0 </button>
+                    <button class="primaryAction__input button_action" value="add"><i class="bi bi-plus-lg"></i></button>
+                    <button class="primaryAction__input button_action" value="erase"> <i class="bi bi-backspace"></i> </button>
+                </div>  <!-- end of analyzer numbers and actions for the display -->
+
+                <div class="secondary__action">    <!-- adding number to the array -->
+                    <button id="add__number">mostrar resultados <i class="bi bi-arrow-right-short"></i></button>
+                </div>  <!-- end of adding number to the array -->
+            </div>  <!-- end of analyzer calculator -->
+        </section>  <!-- end of analyzer calculator container -->
+
+    </div>
+
+    <div class="results__display">
+        <section class="show__results">    <!-- results container -->
+            <header class="results__actions">
+                <h2>Números adicionados</h2>
+                <div class="search__container">
+                    <input type="search" name="search" id="search__number" placeholder="Procurar número...">
+                    <i class="bi bi-search" id="search_button"></i>
+                </div>
+
+                <button id="erase__alldata">Limpar dados <i class="bi bi-trash"></i></button>
+            </header>
+
+            <div class="display__numbers">  <!-- display numbers after pressing results button  -->
+                <ul id="numbersPair__list" class="numbers__list">
+                </ul>    <!-- list for adding dinamic li  -->
+
+                <ul id="numbersOdd__list" class="numbers__list">
+                </ul>     <!-- list for adding dinamic li  -->
+            </div>
+
+        </section>  <!-- end of results container -->
+    </div>
+
+
+    <div class="modal__alert" id="modal__alert">
+        <header>
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            <h2>Alerta de Erro</h2>
+        </header>
+
+        <div class="content">
+            <span id="alert__content">O número digitado não encontrado!</span>
+            <button id="close__modal">Ok</button>
+        </div>
+    </div>
+</body>
+</html>
